@@ -125,4 +125,4 @@ tools/          scripts Python que geram texturas e arte dos itens
 
 ## 📄 Licença
 
-[CC0-1.0](LICENSE): domínio público. Use, modifique e distribua à vontade.
+[CC0-1.0](LICENSE): domínio público. Use e abuse :D, modifique e distribua à vontade.
