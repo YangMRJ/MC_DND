@@ -8,6 +8,7 @@ Tabuleiro 3D, miniaturas com skin própria, dados, fichas de personagem — tudo
 ![Minecraft](https://img.shields.io/badge/Minecraft-26.2-62b47a?style=for-the-badge)
 ![Fabric](https://img.shields.io/badge/Fabric-0.20.1+-dbd0b4?style=for-the-badge)
 ![Java](https://img.shields.io/badge/Java-25+-e76f00?style=for-the-badge)
+![Sistema](https://img.shields.io/badge/Sistema-D%26D%205E%20(2024)-b52b2b?style=for-the-badge)
 ![Licença](https://img.shields.io/badge/licença-CC0--1.0-lightgrey?style=for-the-badge)
 
 <img src="preview_sprites.png" alt="Tabuleiro, ficha, caixa de dados e caixa de miniaturas" width="640">
@@ -90,6 +91,24 @@ Depois de pousados, continuam **totalmente funcionais**, sem precisar estar no i
 
 ---
 
+## 🗺️ Roadmap e Próximas Fases
+
+O objetivo final do mod é criar um ambiente completo e fluido onde uma **campanha inteira possa ser montada e jogada dentro do Minecraft**.
+
+O foco mecânico será exclusivamente no sistema **D&D 5E (revisão de 2024)**, com suporte planejado para suplementos oficiais (como *O Caldeirão de Tasha para Tudo* e *O Guia de Xanathar para Todas as Coisas*). Para mesas com regras da casa, o **Homebrew** continuará 100% viável através da edição manual de fichas e de uma futura mecânica de **"páginas soltas"**, permitindo colar conteúdos customizados diretamente nos livros do mod.
+
+### 🚀 O que vem por aí
+
+| Área | Planejamento e Melhorias |
+|---|---|
+| 🗺️ **Tabuleiro 3D** | • Reformulação completa da **UI**, controles de câmera e movimentação de miniaturas.<br>• Sistema de **combate por turnos** e **efeitos visuais de combate** (áreas de magia, condições, etc.).<br>• Sistema de **criação e armazenamento de mapas** salvos.<br>• Suporte à renderização de **shaders** dentro da visualização do tabuleiro *(desafio técnico alto)*. |
+| 🏗️ **Construtor de Mapas (Dimensão)** | • Criação de mapas *in-game*: o mestre/criador será transportado para uma **dimensão dedicada** onde poderá construir o cenário em blocos de verdade, salvando a estrutura para convertê-la automaticamente em um mapa jogável no tabuleiro. |
+| 📜 **Ficha & Homebrew** | • Ficha muito mais completa e robusta, alinhada às regras de **D&D 5E 2024** (perícias, proficiências, magias, recursos de classe).<br>• Mecânica de **livros e páginas de Homebrew** para adicionar raças, classes, itens e magias customizadas sem perder a edição manual. |
+| 🎲 **Dados & Miniaturas** | • Reformulação das interfaces da **Caixa de Dados** e da **Caixa de Miniaturas** para ficarem mais interativas e intuitivas.<br>• Melhorias visuais e de interação nas próprias miniaturas. |
+| 🪑 **Posicionamento na Mesa** | • *Revamp* completo na mecânica de pousar e organizar objetos (fichas, caixas e minis) sobre os blocos e tabuleiros, tornando o encaixe e a manipulação mais precisos e naturais. |
+
+---
+
 ## 🔧 Compilar
 
 Requer **Java 25**. O Gradle Wrapper baixa a distribuição do Gradle sozinho, se precisar.
@@ -97,32 +116,3 @@ Requer **Java 25**. O Gradle Wrapper baixa a distribuição do Gradle sozinho, s
 ```bash
 ./gradlew build          # Linux / macOS
 gradlew.bat build        # Windows
-```
-
-O `.jar` sai em `build/libs/`. Para testar no jogo: `./gradlew runClient`.
-
-**Dependências:** Minecraft `26.2`, Fabric Loader `>= 0.20.1`, Fabric API.
-
----
-
-## 🗂️ Estrutura
-
-```
-src/main/java/com/example/dnd/
-├── block/      tabuleiro, suporte de miniatura, dados da mini
-├── box/        armazenamento das caixas no servidor (abas)
-├── entity/     miniatura em pé e itens pousados na mesa
-├── item/       caixa de dados, caixa de minis, ficha, miniatura
-├── network/    pacotes cliente <-> servidor
-└── sheet/      dados e registro da ficha de personagem
-src/client/java/com/example/dnd/client/
-├── telas       tabuleiro, caixa de minis, dados, ficha
-└── render/     renderers (miniaturas, itens na mesa, bandeja 3D)
-tools/          scripts Python que geram texturas e arte dos itens
-```
-
----
-
-## 📄 Licença
-
-[CC0-1.0](LICENSE): domínio público. Use e abuse :D, modifique e distribua à vontade.
